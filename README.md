@@ -1,5 +1,24 @@
-# utilization of A* to solve the prefix reversal problem
+# NativeWiki
+NativeWIki provides a lightweight engine that servers markdown files from git
+repositories alongside search functionality. The intent is to allow for
+documentation not tied to any particular (i.e. our) wiki engine,
+versioned in git, and editable from a terminal. To do this
+a central server allows for the user to add wikiroots, which are directories
+that contain markdown files and are part of a git repository. The server then
+indexes those wikiroots and will display:
+* A list of Wikiroots
+* A global full text search against all roots
+* Within a root:
+    - A tree of files within that root
+    - A search bar against the current wikiroot
+    - The current file you are viewing or editing
+    - In view mode, some helpful metadata
+    - In edit mode, a markdown editor
 
-This is a mini application built in Go to solve the pancake sorting problem.
+The server is behind some simple authentication.
 
-It's A* package is built to use an interface that will accept any type which has the ability to generate children that are of the same type as itself, and which has a method that allows one to check whether it is a goal node. The A* package also requires a heuristic function be given to it that will estimate the distance to the goal.
+## Server
+
+This repository is specifically for the server component
+
+## Building
